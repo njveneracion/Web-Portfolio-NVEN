@@ -1,5 +1,15 @@
 import React from "react";
 
+const styles = {
+  heroImg: {
+    filter: "grayscale(80%)",
+    transition: "all 0.5s ease",
+    "&:hover": {
+      filter: "grayscale(0%)",
+    },
+  },
+};
+
 const Hero = () => {
   return (
     <section
@@ -43,17 +53,24 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="relative h-[400px] lg:h-[500px]">
+          <div
+            className="group relative flex justify-center items-center w-full 
+            hover:shadow-2xl transition-all duration-500 ease-in-out 
+            bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900/10
+            rounded-2xl overflow-hidden">
+            {" "}
+            {/* Added rounded-2xl */}
             <div
-              className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 
-                          dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl">
-              <img
-                src=""
-                alt="Profile"
-                className="w-full h-full object-cover rounded-2xl"
-              />
-            </div>
+              className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 
+              transition-opacity duration-500 rounded-2xl"></div>
+            <img
+              src="/icon.png"
+              alt="Profile"
+              className="w-[300px] h-[300px] lg:w-[490px] lg:h-[540px] 
+             object-contain z-10 hover:scale-105 transition-transform 
+             duration-500 ease-in-out rounded-2xl" /* Added rounded-2xl */
+              style={styles.heroImg}
+            />
           </div>
         </div>
       </div>
