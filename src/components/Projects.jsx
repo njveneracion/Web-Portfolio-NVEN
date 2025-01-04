@@ -8,7 +8,7 @@ const projectData = [
       "Learning Management System for Philippine Academy of Technical Studies with CMS (Content Management System)",
     description:
       "A web-based platform that allows students to access learning materials, take quizzes, and view their grades. It also allows teachers to manage courses, quizzes, and student grades.",
-    image: "./Screenshot 2025-01-03 011552.png",
+    image: "/public/Screenshot 2025-01-03 011552.png",
     github: "https://github.com/njveneracion/Online-Learning-Platform-with-CMS",
     demo: "/LMS Video Walkthrough.mp4",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],

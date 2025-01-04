@@ -7,7 +7,7 @@ const certificationData = [
     title: "IT Specialist: HTML and CSS",
     issuer: "Certiport",
     date: "December 05, 2024",
-    image: "/image.png",
+    image: "/public/image.png",
     credentialId: "udDd-XM3V",
     verifyLink: "https://verify.certiport.com/",
     skills: ["HTML", "CSS"],

@@ -64,7 +64,7 @@ const Hero = () => {
               className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 
               transition-opacity duration-500 rounded-2xl"></div>
             <img
-              src="/icon.png"
+              src="/public/icon.png"
               alt="Profile"
               className="w-[300px] h-[300px] lg:w-[490px] lg:h-[540px] 
              object-contain z-10 hover:scale-105 transition-transform 
