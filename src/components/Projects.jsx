@@ -8,21 +8,23 @@ const projectData = [
       "Learning Management System for Philippine Academy of Technical Studies with CMS (Content Management System)",
     description:
       "A web-based platform that allows students to access learning materials, take quizzes, and view their grades. It also allows teachers to manage courses, quizzes, and student grades.",
-    image: "/public/Screenshot 2025-01-03 011552.png",
+    image: "./Screenshot 2025-01-03 011552.png",
     github: "https://github.com/njveneracion/Online-Learning-Platform-with-CMS",
-    demo: "/LMS Video Walkthrough.mp4",
+    demo: "https://drive.google.com/file/d/1kzQXqv58Mi0xieqdL6hapLrvU6RRpebK/view?usp=sharing",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     note: "Note: I don't have a live demo for this project, so I uploaded a video walkthrough instead.",
   },
   // Add more projects here
   {
     id: 2,
-    title: "Ongoing Project",
-    description: "",
-    image: "",
-    github: "",
+    title: "doThis: A Task Manager App with JWT Authentication",
+    description:
+      " A task manager app that allows users to create, read, update, and delete tasks. It also has user authentication using JWT.",
+    image: "./doThis.PNG",
+    github: "https://github.com/njveneracion/TaskManagerApp-MERN.git",
     demo: "",
-    tags: ["", "", "", ""],
+    tags: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"],
+    note: "Note: I don't have a live demo for this project, so I uploaded a video walkthrough instead.",
   },
   {
     id: 3,
@@ -45,17 +47,22 @@ const techColors = {
   MySQL: "bg-blue-700 dark:bg-blue-800",
   MongoDB: "bg-green-600 dark:bg-green-700",
   NodeJS: "bg-green-500 dark:bg-green-600",
-  TypeScript: "bg-blue-600 dark:bg-blue-700",
-  Python: "bg-yellow-600 dark:bg-yellow-700",
-  Java: "bg-red-500 dark:bg-red-600",
+  ExpressJS: "bg-gray-500 dark:bg-gray-600",
+  ReactJS: "bg-cyan-500 dark:bg-cyan-600",
 };
 
 const Projects = () => {
   return (
     <section
-      className="min-h-screen bg-white dark:bg-[#1a1d1e] transition-colors duration-300"
+      className="min-h-screen relative bg-white 
+    dark:bg-gradient-to-b dark:from-[#111827] dark:via-[#0f172a] dark:to-[#0c1015]
+    transition-all duration-300 overflow-hidden"
       id="projects">
-      <div className="max-w-7xl mx-auto px-4 py-20">
+      {/* Add subtle pattern overlay */}
+      <div className="absolute inset-0 dark:bg-grid-pattern opacity-[0.03] pointer-events-none" />
+
+      {/* Existing content with enhanced container background */}
+      <div className="relative max-w-7xl mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           My Projects
         </h2>
@@ -65,7 +72,10 @@ const Projects = () => {
             <motion.div
               key={project.id}
               whileHover={{ y: -5 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-colors duration-300">
+              className="bg-gray-50/90 backdrop-blur-sm 
+            dark:bg-gray-800/90 rounded-xl overflow-hidden 
+            shadow-lg hover:shadow-xl transition-all duration-300
+            dark:border dark:border-gray-700/50">
               <img
                 src={project.image}
                 alt={project.title}

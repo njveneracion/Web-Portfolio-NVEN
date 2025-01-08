@@ -20,7 +20,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/90 dark:bg-[#1a1d1e] backdrop-blur-sm shadow-sm transition-all duration-300">
+    <header
+      className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm
+    dark:bg-gradient-to-b dark:from-[#111827] dark:via-[#0f172a] dark:to-[#0c1015]
+    transition-all duration-300 border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}

@@ -11,7 +11,10 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-[#1a1d1e] transition-colors duration-300 relative">
+    <footer
+      className="relative bg-white 
+    dark:bg-gradient-to-b dark:from-[#111827] dark:via-[#0f172a] dark:to-[#0c1015]
+    transition-all duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900/10 opacity-50"></div>
       <div className="max-w-7xl mx-auto px-4 py-16 relative">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">

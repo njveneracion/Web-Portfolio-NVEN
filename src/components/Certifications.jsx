@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const certificationData = [
   {
@@ -7,20 +7,54 @@ const certificationData = [
     title: "IT Specialist: HTML and CSS",
     issuer: "Certiport",
     date: "December 05, 2024",
-    image: "/public/image.png",
+    image: "./image.png",
     credentialId: "udDd-XM3V",
     verifyLink: "https://verify.certiport.com/",
     skills: ["HTML", "CSS"],
   },
-  // Add more certifications here
+  {
+    id: 2,
+    title: "The Complete 2024 Web Development Bootcamp",
+    issuer: "Udemy",
+    date: "October 14, 2024",
+    image: "./udemy.jpg",
+    credentialId: "UC-77fb6731-9c7f-43a3-a181-825ce3ba6f76",
+    verifyLink: "https://ude.my/UC-77fb6731-9c7f-43a3-a181-825ce3ba6f76",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "React",
+      "PostgreSQL",
+      "Web3",
+      "DApps",
+    ],
+  },
 ];
 
 const Certifications = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
+
   return (
-    <section className="min-h-screen bg-white dark:bg-[#1a1d1e] transition-colors duration-300">
+    <section
+      className="min-h-screen relative bg-white 
+    dark:bg-gradient-to-b dark:from-[#111827] dark:via-[#0f172a] dark:to-[#0c1015]
+    transition-all duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-          Certifications
+          Certifications and Courses
         </h2>
 
         <div className="space-y-6">
@@ -30,7 +64,8 @@ const Certifications = () => {
               whileHover={{ scale: 1.02 }}
               className="flex flex-col md:flex-row bg-gradient-to-r from-gray-50 to-gray-100 
                   dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden shadow-lg 
-                  transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                  transition-all duration-300 border border-gray-200 dark:border-gray-700 cursor-pointer"
+              onClick={() => openModal(cert.image)}>
               <div
                 className="w-full md:w-1/3 p-6 flex items-center justify-center 
                   bg-blue-50 dark:bg-gray-800">
@@ -97,6 +132,46 @@ const Certifications = () => {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeModal}
+            className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+            <motion.div
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.5 }}
+              className="relative max-w-4xl w-full">
+              <img
+                src={selectedImage}
+                alt="Certificate"
+                className="w-full h-auto rounded-lg"
+              />
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2
+                    hover:bg-opacity-75 transition-all">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
