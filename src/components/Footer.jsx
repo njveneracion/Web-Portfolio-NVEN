@@ -106,7 +106,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 dark:border-gray-800"></div>
 
         {/* Copyright */}
-        <div className="pt-8">
+        <div className="pt-12">
           <p className="text-center text-sm text-gray-600 dark:text-gray-400">
             © {new Date().getFullYear()} Nelson Jay Veneracion. All rights
             reserved.

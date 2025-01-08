@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import { motion, useScroll, useSpring } from "framer-motion";
 import About from "./components/About";
+import Gallery from "./components/Gallery";
 
 const styles = {
   progress: {
@@ -39,6 +40,7 @@ const App = () => {
       <Hero />
       <Skills />
       <About />
+      <Gallery />
       <Projects />
       <Certifications />
       <Contact />

@@ -124,7 +124,7 @@ const Contact = () => {
       id="contact"
       className="min-h-screen relative bg-white dark:bg-gradient-to-b dark:from-[#111827] dark:via-[#0f172a] dark:to-[#0c1015] transition-all duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-20 text-center">
           Get In Touch
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

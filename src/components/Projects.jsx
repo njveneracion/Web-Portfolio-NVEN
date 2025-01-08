@@ -28,12 +28,14 @@ const projectData = [
   },
   {
     id: 3,
-    title: "Ongoing Project",
-    description: "",
-    image: "",
-    github: "",
+    title: "VFood: A Food Ordering System",
+    description:
+      " A food ordering system that allows customers to order food online. It also allows restaurant owners to manage their menu and orders.",
+    image: "./food-ordering-system.PNG",
+    github: "https://github.com/njveneracion/food-cart-business-website.git",
     demo: "",
-    tags: ["", "", "", ""],
+    tags: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"],
+    ongoing: true,
   },
 ];
 
@@ -63,7 +65,7 @@ const Projects = () => {
 
       {/* Existing content with enhanced container background */}
       <div className="relative max-w-7xl mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-20 text-center">
           My Projects
         </h2>
 
@@ -133,8 +135,19 @@ const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors">
-                    {project.note ? "Video Walkthrough" : "Live Demo"}
+                    className={`px-4 py-2 ${
+                      project.ongoing
+                        ? "bg-gray-400 dark:bg-gray-600 cursor-not-allowed"
+                        : "bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600"
+                    } text-white rounded-lg transition-colors`}
+                    onClick={
+                      project.ongoing ? (e) => e.preventDefault() : undefined
+                    }>
+                    {project.ongoing
+                      ? "Coming Soon"
+                      : project.note
+                      ? "Video Walkthrough"
+                      : "Live Demo"}
                   </a>
                 </div>
               </div>
