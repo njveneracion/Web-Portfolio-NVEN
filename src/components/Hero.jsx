@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
+import GcashModal from "./GcashModal";
 
 const styles = {
   heroImg: {
@@ -60,6 +61,7 @@ const TypewriterText = ({ text }) => {
 };
 
 const Hero = () => {
+  const [isGcashOpen, setIsGcashOpen] = useState(false);
   return (
     <section id="home">
       <motion.section
@@ -110,6 +112,12 @@ const Hero = () => {
                   </button>
                 </a>
               </motion.div>
+
+              {/* Add GcashModal inside Hero section */}
+              <GcashModal
+                isOpen={isGcashOpen}
+                onClose={() => setIsGcashOpen(false)}
+              />
             </div>
 
             <motion.div
@@ -117,13 +125,13 @@ const Hero = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
               className="group relative flex justify-center items-center w-full 
-    rounded-2xl overflow-hidden
-    before:absolute before:inset-0 
-    before:p-[2px] before:rounded-2xl 
-    before:bg-gradient-to-r 
-    before:from-blue-500 before:via-transparent before:to-blue-500
-    before:animate-border
-    before:bg-[length:200%_auto]"
+                          rounded-2xl overflow-hidden
+                          before:absolute before:inset-0 
+                          before:p-[2px] before:rounded-2xl 
+                          before:bg-gradient-to-r 
+                          before:from-blue-500 before:via-transparent before:to-blue-500
+                          before:animate-border
+                          before:bg-[length:200%_auto]"
               style={{
                 padding: "2px",
               }}>

@@ -26,14 +26,16 @@ const BackToTop = () => {
 
   return (
     <button
-      className="fixed bottom-4 right-4 bg-gradient-to-r from-[#111827] via-[#0f172a] to-[#0c1015] 
-      text-white p-4 rounded-full shadow-lg transition-all duration-300 
-      hover:shadow-blue-500/50 hover:scale-110 dark:text-gray-100 opacity-60 hover:opacity-100"
+      onClick={scrollToTop}
+      className="fixed bottom-20 right-4 
+    bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
+    hover:from-blue-600 hover:via-blue-700 hover:to-blue-800
+    text-white p-4 rounded-full shadow-lg transition-all duration-300 
+    hover:shadow-blue-500/50 hover:scale-110 
+    dark:text-gray-100 opacity-60 hover:opacity-100
+    animate-gradient bg-[length:200%_200%]"
       style={{ display: isVisible ? "block" : "none" }}>
-      <MdKeyboardDoubleArrowUp
-        onClick={scrollToTop}
-        className="animate-bounce"
-      />
+      <MdKeyboardDoubleArrowUp className="animate-bounce" />
     </button>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaCoffee } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -85,15 +85,15 @@ const Header = () => {
               onClick={() => setIsOpen(!isOpen)}>
               <motion.span
                 animate={isOpen ? { rotate: 45, y: 10 } : { rotate: 0, y: 0 }}
-                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-300"
+                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-75"
               />
               <motion.span
                 animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-300"
+                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-75"
               />
               <motion.span
                 animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-300"
+                className="w-6 h-0.5 bg-gray-600 dark:bg-gray-400 block transition-all duration-75"
               />
             </button>
           </div>

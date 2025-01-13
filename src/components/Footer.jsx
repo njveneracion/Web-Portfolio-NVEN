@@ -42,35 +42,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="text-center space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Quick Links
-            </h4>
-            <nav className="flex flex-col space-y-2">
-              <a
-                href="#hero"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                About
-              </a>
-              <a
-                href="#projects"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                Contact
-              </a>
-            </nav>
-          </div>
-
           {/* Social Links */}
           <div className="text-center md:text-right space-y-4">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -92,7 +63,7 @@ const Footer = () => {
                 <FaGithub className="text-2xl text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 transform group-hover:scale-110" />
               </a>
               <a
-                href="https://facebook.com/your-profile"
+                href="https://facebook.com/njveneracionn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group">

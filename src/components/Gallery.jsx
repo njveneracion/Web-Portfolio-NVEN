@@ -17,20 +17,6 @@ const galleryData = [
     story:
       "This is a photo of my messy setup. I know it's not the best setup, but it's where I get things done. This is where I code, design, and play games. I'm planning to upgrade it soon.",
   },
-  {
-    id: 3,
-    image: "./gym-buddies.jpg",
-    title: "Gym Buddies",
-    story:
-      "This is a photo of me and my gym buddies. We've been working out together for a few months now. It's been a great journey so far. We motivate each other to push harder and be better every day.",
-  },
-  {
-    id: 4,
-    image: "./unwinding.jpg",
-    title: "Unwinding",
-    story:
-      "This is a photo of me unwinding after a long day of coding. I like to relax and watch my favorite TV shows or play games. It helps me clear my mind and recharge for the next day.",
-  },
 ];
 
 const Gallery = () => {

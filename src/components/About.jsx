@@ -154,10 +154,7 @@ const About = () => {
                   Now, I have one last semester dedicated to my On-the-Job
                   Training (OJT) and soon to be a software engineer. This is my
                   last chance to prove to myself that I'm ready for the real
-                  world. Every day during my OJT, I remind myself that this is
-                  the culmination of everything I've worked for. I may not have
-                  been the best student in the beginning, but I'm determined to
-                  be the best version of myself now.
+                  world.
                 </p>
                 <p className="mb-4">
                   The journey hasn't been easy, and I know the road ahead will
