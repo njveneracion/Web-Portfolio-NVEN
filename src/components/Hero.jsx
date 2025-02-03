@@ -137,7 +137,7 @@ const Hero = () => {
               }}>
               <div className="relative z-10 w-full h-full bg-white dark:bg-gray-900 rounded-2xl flex justify-center items-center p-10">
                 <img
-                  src="./dp.png"
+                  src="./dp2.jpg"
                   alt="Profile"
                   className="w-[300px] h-[300px] lg:w-[490px] lg:h-[540px] 
                   object-cover rounded-3xl filter grayscale  transition-all duration-500 ease-in-out 
