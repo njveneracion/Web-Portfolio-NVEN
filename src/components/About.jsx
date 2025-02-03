@@ -85,9 +85,9 @@ const About = () => {
                   The Beginning
                 </h3>
                 <p className="mb-4">
-                  Hi, I'm NJ, a 4th-year BSIT student. Life as a student has
-                  always been a mix of hope and hardship, but the dream of
-                  becoming a software engineer has kept me moving forward.
+                  Life as a student has always been a mix of hope and hardship,
+                  but the dream of becoming a software engineer has kept me
+                  moving forward.
                 </p>
               </section>
 
