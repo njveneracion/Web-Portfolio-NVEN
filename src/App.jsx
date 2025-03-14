@@ -47,7 +47,7 @@ const App = () => {
           rounded-full text-white shadow-lg z-50
           transition-all duration-200 transform hover:scale-105">
         <FaCoffee className="text-lg" />
-        <span className="font-medium text-sm">Buy me a coffee</span>
+        <span className="font-medium text-sm">Support my work!</span>
       </button>
       <GcashModal
         isOpen={isGcashModalOpen}
