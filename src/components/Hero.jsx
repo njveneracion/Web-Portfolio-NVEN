@@ -140,7 +140,7 @@ const Hero = () => {
                   src="./2c71110c-3cd4-4bbd-8da1-6e3171bb67b6.jpg"
                   alt="Profile"
                   className="w-[300px] h-[300px] lg:w-[490px] lg:h-[540px] 
-                  object-cover rounded-3xl filter grayscale  transition-all duration-500 ease-in-out 
+                  object-cover rounded-3xl  transition-all duration-500 ease-in-out 
                  "
                 />
               </div>
