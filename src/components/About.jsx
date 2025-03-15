@@ -176,8 +176,7 @@ const About = () => {
                   about how you finish.
                 </blockquote>
                 <p className="text-right italic mt-6">
-                  This is NJ, signing off as a 4th-year student, but soon, a
-                  software engineer.
+                  -NJ
                 </p>
               </section>
             </div>
